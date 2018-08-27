@@ -8,6 +8,7 @@ var page = {
     popup.bindEvents();
     this.bindEvents();
   },
+
   bindEvents: function() {
     document.addEventListener('click', this.getCurrentElem);
   },
@@ -26,26 +27,20 @@ var popup = {
   bindEvents: function() {
     var popupWrap = document.querySelector('.popup-wrapper');
     var background = document.querySelector('.popup-background');
-    var closePopupButton = document.querySelector(
-      '.popup-button__close-button'
-    );
+    var page = document.querySelector('.page');
+    var closePopupButton = document.querySelector('.popup-button__close-button');
 
-    closePopupButton.addEventListener(
-      'click',
-      this.hidePopup.bind(this, popupWrap, background)
-    );
+    closePopupButton.addEventListener('click', this.hidePopup.bind(this, popupWrap, background, page));
   },
 
   createPopupElem: function(elem, popupType) {
     var elem = elem;
-
-    var deviceName = elem.querySelector('.device-info-card__device-name')
-      .innerHTML;
-    var deviceState = elem.querySelector('.device-info-card__divice-state')
-      .innerHTML;
-
+    var deviceName = elem.querySelector('.device-info-card__device-name').innerHTML;
+    var deviceState = elem.querySelector('.device-info-card__divice-state').innerHTML;
     var popupWrap = document.querySelector('.popup-wrapper');
     var background = document.querySelector('.popup-background');
+    var page = document.querySelector('.page');
+   
     popupArr = document.querySelectorAll('.popup');
 
     popupArr.forEach(function(v) {
@@ -59,6 +54,8 @@ var popup = {
     });
 
     background.style.display = 'block';
+    page.style.filter = 'blur(4px)';
+
     popupWrap.classList.add('show');
     popupWrap.classList.remove('hide');
 
@@ -68,10 +65,11 @@ var popup = {
     popupMoveSelector.init(popupWrap, popupType);
   },
 
-  hidePopup: function(popupWrap, background, e) {
+  hidePopup: function(popupWrap, background, page,e) {
     popupWrap.classList.add('hide');
     popupWrap.classList.remove('show');
     background.style.display = 'none';
+    page.style.filter = 'none';
   }
 };
 
@@ -80,7 +78,6 @@ var popupMoveSelector = {
   init: function(popupWrap, popupType) {
 
     this.container = popupWrap.querySelector('.popup__' + popupType + '-selector');
-    
     this.circle = this.container.querySelector('.selection-circle');
 
     this.circle.addEventListener('touchstart', this.onTouchStart.bind(this, popupWrap, popupType ));
@@ -90,24 +87,22 @@ var popupMoveSelector = {
     this.circle.addEventListener('mousedown', this.onTouchStart.bind(this, popupWrap, popupType ));
     document.addEventListener('mousemove', this.onTouchMove.bind(this));
     document.addEventListener('mouseup', this.onTouchEnd.bind(this));
-
-
   },
 
   onTouchStart: function(popupWrap, popupType, e){
     this.isTouching = true;
-    
     this.containerCoordinates = this.getCoordinates(this.container);
   },
 
   onTouchMove: function(e) {
     var newCoord;
+    var rightBorder;
+    var bottomBorder;
 
     if (!this.isTouching) {
       return;
     }
     
-
     if (this.container.offsetWidth > this.container.offsetHeight){
       
       newCoord = this.positionHendler(e).posX -  this.containerCoordinates.left;
@@ -116,7 +111,8 @@ var popupMoveSelector = {
         newCoord = 0;
       }
   
-      var rightBorder = this.container.offsetWidth - this.circle.offsetWidth;
+      rightBorder = this.container.offsetWidth - this.circle.offsetWidth;
+
       if (newCoord > rightBorder) {
         newCoord = rightBorder;
       }
@@ -125,10 +121,14 @@ var popupMoveSelector = {
     } else {
 
       newCoord = this.positionHendler(e).posY - this.containerCoordinates.top;
+
       if (newCoord < 0) {
         newCoord = 0 - this.circle.offsetHeight;
       }
-      var bottomBorder = this.container.offsetHeight - this.circle.offsetHeight;
+
+
+      bottomBorder = this.container.offsetHeight - this.circle.offsetHeight;
+
       if (newCoord > bottomBorder) {
         newCoord = bottomBorder - this.circle.offsetHeight;
       }

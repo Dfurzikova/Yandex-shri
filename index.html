@@ -11,297 +11,287 @@
 </head>
 
 <body>
+    <div class="page">
+        <!-- header -->
+        <nav class="header">
+            <img class="header__logo" src="assets/ya-dom-1x.png" srcset=" assets/ya-dom-2x.png 2x" />
 
-    <!-- header -->
-    <nav class="header">
-        <img class="header__logo" src="assets/ya-dom-1x.png" srcset=" assets/ya-dom-2x.png 2x" />
+            <div class="adaptive-icon-list"> </div>
 
-        <div class="adaptive-icon-list"> </div>
+            <div>
+                <ul class="menu header__menu">
+                    <li class="menu__item menu__item-active">
+                        <a class="menu__item_link" href="#">Сводка</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__item_link" href="#">Устройства</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__item_link" href="#">Сценарии</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <span class="divide-line"></span>
+        <!-- end header -->
 
-        <div>
-            <ul class="menu header__menu">
-                <li class="menu__item menu__item-active">
-                    <a class="menu__item_link" href="#">Сводка</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item_link" href="#">Устройства</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item_link" href="#">Сценарии</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <span class="divide-line"></span>
-    <!-- end header -->
+        <!-- Основной контент страницы  - page-layout -->
+        <div class="page-layout">
 
+            <!--  Блок Главное -->
+            <div class="page-layout__actual-info-block ">
 
-
-    <!-- Основной контент страницы  - page-layout -->
-    <div class="page-layout">
-
-        <!--  Блок Главное -->
-        <div class="page-layout__actual-info-block ">
-
-            <div class="basic-block">
-                <div class="basic-block__header actual-info-block__header ">
-                    <h1 class="basic-block__title">Главное</h1>
-                </div>
-
-                <div class="basic-block__container basic-block__container-image">
-
-                    <div class="basic-block__container__left-side">
-                        <!-- Блок приветствия -->
-                        <div class="user-greating">
-                            <h1 class="user-greating__title"> Привет, Геннадий!</h1>
-                            <h2 class="user-greating__info"> Двери и окна закрыты, сигнализация включена.</h2>
-                        </div>
-                        <!-- Блоки локации и температуры -->
-                        <div class=" temp-state basic-block-container__temp-state">
-                            <div class="temp-state__location">Дома</div>
-                            <div class="temp-state__value">+23</div>
-                        </div>
-
-                        <div class="temp-state basic-block-container__temp-state ">
-                            <div class="temp-state__location">За окном</div>
-                            <div class="temp-state__value">+19</div>
-                            <img class="temp-state__value_icon" src="assets/loud-drizzle.png" srcset=" assets/cloud-drizzle-2x.png 2x" />
-                        </div>
+                <div class="basic-block">
+                    <div class="basic-block__header actual-info-block__header ">
+                        <h1 class="basic-block__title">Главное</h1>
                     </div>
 
-                    <div class="basic-block__right-side">
+                    <div class="basic-block__container basic-block__container-image">
 
-                        <div class="cards-container">
-                            <div class="cards-container__scrolling">
+                        <div class="basic-block__container__left-side">
+                            <!-- Блок приветствия -->
+                            <div class="user-greating">
+                                <h1 class="user-greating__title"> Привет, Геннадий!</h1>
+                                <h2 class="user-greating__info"> Двери и окна закрыты, сигнализация включена.</h2>
+                            </div>
+                            <!-- Блоки локации и температуры -->
+                            <div class=" temp-state basic-block-container__temp-state">
+                                <div class="temp-state__location">Дома</div>
+                                <div class="temp-state__value">+23</div>
+                            </div>
 
-                                <div class="show-more-cards">
-                                    <img class="show-more-card__arrow-double-icon" src="assets/arrow-double-1x.png" srcset=" assets/arrow-double-2x.png 2x" />
-                                </div>
+                            <div class="temp-state basic-block-container__temp-state ">
+                                <div class="temp-state__location">За окном</div>
+                                <div class="temp-state__value">+19</div>
+                                <img class="temp-state__value_icon" src="assets/loud-drizzle.png" srcset=" assets/cloud-drizzle-2x.png 2x" />
+                            </div>
+                        </div>
 
+                        <div class="basic-block__right-side">
 
-                                <div class="device-info-card cards-container__device-info-card" data-device-type="temperature">
-                                    <div class="temperature icon device-info-card__icon-position"></div>
-                                    <div class="device-info-card__position">
-                                        <h1 class="device-info-card__device-name">Philips Cooler</h1>
-                                        <h2 class="device-info-card__divice-state">Начнет охлаждать в 16:30</h2>
+                            <div class="cards-container">
+                                <div class="cards-container__scrolling">
+
+                                    <div class="show-more-cards">
+                                        <img class="show-more-card__arrow-double-icon" src="assets/arrow-double-1x.png" srcset=" assets/arrow-double-2x.png 2x" />
                                     </div>
-                                </div>
 
-                                <div class="device-info-card cards-container__device-info-card" data-device-type="light">
-                                    <div class="sun icon device-info-card__icon-position"></div>
-                                    <div class="device-info-card__position">
-                                        <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
-                                        <h2 class="device-info-card__divice-state">Включится в 17.00</h2>
-                                    </div>
-                                </div>
-                                <div class="device-info-card cards-container__device-info-card" data-device-type="warm">
-                                    <div class="sun icon device-info-card__icon-position"></div>
-                                    <div class="device-info-card__position">
-                                        <h1 class="device-info-card__device-name">Xiaomi Warm Floor</h1>
-                                        <h2 class="device-info-card__divice-state">Включено</h2>
-                                    </div>
-                                </div>
 
+                                    <div class="device-info-card cards-container__device-info-card" data-device-type="temperature">
+                                        <div class="temperature icon device-info-card__icon-position"></div>
+                                        <div class="device-info-card__position">
+                                            <h1 class="device-info-card__device-name">Philips Cooler</h1>
+                                            <h2 class="device-info-card__divice-state">Начнет охлаждать в 16:30</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="device-info-card cards-container__device-info-card" data-device-type="light">
+                                        <div class="sun icon device-info-card__icon-position"></div>
+                                        <div class="device-info-card__position">
+                                            <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
+                                            <h2 class="device-info-card__divice-state">Включится в 17.00</h2>
+                                        </div>
+                                    </div>
+                                    <div class="device-info-card cards-container__device-info-card" data-device-type="warm">
+                                        <div class="sun icon device-info-card__icon-position"></div>
+                                        <div class="device-info-card__position">
+                                            <h1 class="device-info-card__device-name">Xiaomi Warm Floor</h1>
+                                            <h2 class="device-info-card__divice-state">Включено</h2>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end Блок Главное -->
+            <!-- end Блок Главное -->
 
-        <!-- Избранные сценарии -->
-        <div class="page-layout__selected-scenarios">
-            <div class="basic-block">
+            <!-- Избранные сценарии -->
+            <div class="page-layout__selected-scenarios">
+                <div class="basic-block">
 
-                <div class="basic-block__header">
-                    <h1 class="basic-block__title">Избранные сценарии</h1>
+                    <div class="basic-block__header">
+                        <h1 class="basic-block__title">Избранные сценарии</h1>
 
-                    <div class="arrows basic-block__arrows">
-                        <img class="arrows__left-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
-                        <img class="arrows__right-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
+                        <div class="arrows basic-block__arrows">
+                            <img class="arrows__left-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
+                            <img class="arrows__right-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="basic-block__container basic-block__container_selected-scenarios">
-                    <!-- Первый экран карточек -->
-                    <div class="selected-scenarios-layout">
+                    <div class="basic-block__container basic-block__container_selected-scenarios">
+                        <!-- Первый экран карточек -->
+                        <div class="selected-scenarios-layout">
 
-                        <div class="scenario-card basic-block__container_position-device-info-card">
-                            <div class="sun_active icon scenario-card__icon-position"></div>
-                            <div class="scenario-card__position">
-                                <h1 class="scenario-card__device-name">Выключить весь свет в доме и во дворе</h1>
+                            <div class="scenario-card basic-block__container_position-device-info-card">
+                                <div class="sun_active icon scenario-card__icon-position"></div>
+                                <div class="scenario-card__position">
+                                    <h1 class="scenario-card__device-name">Выключить весь свет в доме и во дворе</h1>
 
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="scenario-card basic-block__container_position-device-info-card">
-                            <div class="scheduled icon scenario-card__icon-position"></div>
-                            <div class="scenario-card__position">
-                                <h1 class="scenario-card__device-name">Я ухожу</h1>
+                            <div class="scenario-card basic-block__container_position-device-info-card">
+                                <div class="scheduled icon scenario-card__icon-position"></div>
+                                <div class="scenario-card__position">
+                                    <h1 class="scenario-card__device-name">Я ухожу</h1>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="scenario-card basic-block__container_position-device-info-card">
-                            <div class="sun_active icon scenario-card__icon-position"></div>
-                            <div class="scenario-card__position">
-                                <h1 class="scenario-card__device-name">Включить свет
-                                    <br> в коридоре</h1>
+                            <div class="scenario-card basic-block__container_position-device-info-card">
+                                <div class="sun_active icon scenario-card__icon-position"></div>
+                                <div class="scenario-card__position">
+                                    <h1 class="scenario-card__device-name">Включить свет
+                                        <br> в коридоре</h1>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="scenario-card basic-block__container_position-device-info-card">
-                            <div class="temperature_active icon scenario-card__icon-position"></div>
-                            <div class="scenario-card__position">
-                                <h1 class="scenario-card__device-name">Набрать горячую ванну</h1>
-                                <h2 class="scenario-card__divice-state">Начнется в 18.00</h2>
+                            <div class="scenario-card basic-block__container_position-device-info-card">
+                                <div class="temperature_active icon scenario-card__icon-position"></div>
+                                <div class="scenario-card__position">
+                                    <h1 class="scenario-card__device-name">Набрать горячую ванну</h1>
+                                    <h2 class="scenario-card__divice-state">Начнется в 18.00</h2>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="scenario-card basic-block__container_position-device-info-card">
-                            <div class="temperature_active icon scenario-card__icon-position"></div>
-                            <div class="scenario-card__position">
-                                <h1 class="scenario-card__device-name">Сделать пол тёплым во всей квартире</h1>
+                            <div class="scenario-card basic-block__container_position-device-info-card">
+                                <div class="temperature_active icon scenario-card__icon-position"></div>
+                                <div class="scenario-card__position">
+                                    <h1 class="scenario-card__device-name">Сделать пол тёплым во всей квартире</h1>
+                                </div>
                             </div>
+
+
                         </div>
+                        <!-- end Первый экран карточек -->
 
 
                     </div>
-                    <!-- end Первый экран карточек -->
-
-
-                </div>
-            </div>
-        </div>
-        <!-- end Избранные сценарии -->
-
-
-        <!-- Избранные устройства -->
-        <div class="page-layout__selected-devices">
-            <div class="basic-block">
-
-                <div class="basic-block__header basic-block__header_width">
-                    <h1 class="basic-block__title">Избранные устройства</h1>
-
-                    <div class="basic-block__buttons">
-                        <div class="button_active button__position ">Все</div>
-                        <div class="button button__position ">Кухня</div>
-                        <div class="button button__position ">Зал</div>
-                        <div class="button button__position ">Лампочки</div>
-                        <div class="button button__position ">Камеры</div>
-                    </div>
-
-                    <div class="adaptive-icon-button">
-                        <div class="button_active button__position">Все v</div>
-                    </div>
-
-
-                    <div class="arrows basic-block__arrows">
-                        <img class="arrows__left-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
-                        <img class="arrows__right-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
-                    </div>
-                </div>
-
-                <div class="basic-block__container basic-block__container_horizontal-scrolling">
-
-
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="light">
-                        <div class="sun_active icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
-                            <h2 class="device-info-card__divice-state">Включено</h2>
-                        </div>
-                    </div>
-                    <div class="device-info-card  basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="sun icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">D-Link Omna 180 Cam</h1>
-                            <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
-                        </div>
-                    </div>
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="temperature icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Elgato Eve Degree Connected</h1>
-                            <h2 class="device-info-card__divice-state">Выключено до 17:00</h2>
-                        </div>
-                    </div>
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="sun icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">LIFX Mini Day & Dusk A60 E27</h1>
-                            <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
-                        </div>
-                    </div>
-
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="sun_active icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Xiaomi Mi Air Purifier 2S</h1>
-                            <h2 class="device-info-card__divice-state">Включено</h2>
-                        </div>
-                    </div>
-
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="sun icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Philips Zhirui</h1>
-                            <h2 class="device-info-card__divice-state">Выключено</h2>
-                        </div>
-                    </div>
-
-
-                    <!-- ____ -->
-
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="light">
-                        <div class="sun_active icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
-                            <h2 class="device-info-card__divice-state">Включено</h2>
-                        </div>
-                    </div>
-                    <div class="device-info-card  basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="sun icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">D-Link Omna 180 Cam</h1>
-                            <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
-                        </div>
-                    </div>
-                    <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
-                        <div class="temperature icon device-info-card__icon-position"></div>
-                        <div class="device-info-card__position">
-                            <h1 class="device-info-card__device-name">Elgato Eve Degree Connected</h1>
-                            <h2 class="device-info-card__divice-state">Выключено до 17:00</h2>
-                        </div>
-                    </div>
-
-
-
                 </div>
             </div>
-        </div>
-        <!-- end Избранные устройства -->
+            <!-- end Избранные сценарии -->
 
+            <!-- Избранные устройства -->
+            <div class="page-layout__selected-devices">
+                <div class="basic-block">
+
+                    <div class="basic-block__header basic-block__header_width">
+                        <h1 class="basic-block__title">Избранные устройства</h1>
+
+                        <div class="basic-block__buttons">
+                            <div class="button_active button__position ">Все</div>
+                            <div class="button button__position ">Кухня</div>
+                            <div class="button button__position ">Зал</div>
+                            <div class="button button__position ">Лампочки</div>
+                            <div class="button button__position ">Камеры</div>
+                        </div>
+
+                        <div class="adaptive-icon-button">
+                            <div class="button_active button__position">Все v</div>
+                        </div>
+
+
+                        <div class="arrows basic-block__arrows">
+                            <img class="arrows__left-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
+                            <img class="arrows__right-arrow" src="assets/arrow-1x.png" srcset=" assets/arrow-2x.png 2x" />
+                        </div>
+                    </div>
+
+                    <div class="basic-block__container basic-block__container_horizontal-scrolling">
+
+
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="light">
+                            <div class="sun_active icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
+                                <h2 class="device-info-card__divice-state">Включено</h2>
+                            </div>
+                        </div>
+                        <div class="device-info-card  basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="sun icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">D-Link Omna 180 Cam</h1>
+                                <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
+                            </div>
+                        </div>
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="temperature icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Elgato Eve Degree Connected</h1>
+                                <h2 class="device-info-card__divice-state">Выключено до 17:00</h2>
+                            </div>
+                        </div>
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="sun icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">LIFX Mini Day & Dusk A60 E27</h1>
+                                <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
+                            </div>
+                        </div>
+
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="sun_active icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Xiaomi Mi Air Purifier 2S</h1>
+                                <h2 class="device-info-card__divice-state">Включено</h2>
+                            </div>
+                        </div>
+
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="sun icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Philips Zhirui</h1>
+                                <h2 class="device-info-card__divice-state">Выключено</h2>
+                            </div>
+                        </div>
+
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="light">
+                            <div class="sun_active icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Xiaomi Yeelight LED Smart Bulb</h1>
+                                <h2 class="device-info-card__divice-state">Включено</h2>
+                            </div>
+                        </div>
+                        <div class="device-info-card  basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="sun icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">D-Link Omna 180 Cam</h1>
+                                <h2 class="device-info-card__divice-state">Включится в 17:00</h2>
+                            </div>
+                        </div>
+                        <div class="device-info-card basic-block__container_position-selected-devices" data-device-type="temperature">
+                            <div class="temperature icon device-info-card__icon-position"></div>
+                            <div class="device-info-card__position">
+                                <h1 class="device-info-card__device-name">Elgato Eve Degree Connected</h1>
+                                <h2 class="device-info-card__divice-state">Выключено до 17:00</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end Избранные устройства -->
+
+        </div>
+
+        <!-- Page-layout end -->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer__items">
+                <a class="footer__items_link" href="#">Помощь</a>
+                <a class="footer__items_link" href="#">Обратная связь </a>
+                <a class="footer__items_link" href="#">Разработчикам</a>
+                <a class="footer__items_link" href="#">Условия использования</a>
+            </div>
+
+            <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
+
+        </div>
+        <!-- end footer -->
     </div>
-
-    <!-- Page-layout end -->
-
-
-
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer__items">
-            <a class="footer__items_link" href="#">Помощь</a>
-            <a class="footer__items_link" href="#">Обратная связь </a>
-            <a class="footer__items_link" href="#">Разработчикам</a>
-            <a class="footer__items_link" href="#">Условия использования</a>
-        </div>
-
-        <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
-
-    </div>
-    <!-- end footer -->
-
 
     <!-- popup -->
 
@@ -330,14 +320,12 @@
                     <div class="button button__position ">Тепло</div>
                     <div class="button button__position ">Жарко</div>
                 </div>
-               
+
                 <div class="popup__temperature-selector">
                     <div class="popup__selector-value_min">-10</div>
                     <div class="selection-circle"></div>
                     <div class="popup__selector-value_max">+30</div>
                 </div>
-           
-           
             </div>
         </div>
 
@@ -371,7 +359,6 @@
                     <div class="selection-circle"></div>
                     <div class="popup__selector-value_max popup-icon-sun_max">+30</div>
                 </div>
-            
             </div>
         </div>
         <!--  end popup type light -->
@@ -416,8 +403,6 @@
         </div>
 
     </div>
-
-
     <!-- end popup -->
 
 </body>
